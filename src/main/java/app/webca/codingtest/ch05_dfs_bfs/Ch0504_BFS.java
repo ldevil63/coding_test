@@ -17,10 +17,10 @@ import java.util.Queue;
 public class Ch0504_BFS {
 
     private static class Position {
-        int row;
-        int col;
+        final int row;
+        final int col;
 
-        private Position(int row, int col) {
+        Position(int row, int col) {
             this.row = row;
             this.col = col;
         }

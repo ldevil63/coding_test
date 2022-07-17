@@ -8,8 +8,8 @@ import java.util.PriorityQueue;
 public class Ch0901_Dijkstra_advanced {
 
     private static class Line {
-        int to;
-        int value;
+        final int to;
+        final int value;
 
         Line(int to, int value) {
             this.to = to;

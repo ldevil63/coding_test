@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Sorter {
@@ -58,6 +59,15 @@ public class Sorter {
 
     public static List<String> descString(List<String> list) {
         return list.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+    }
+
+    public static List<String> asc(String str) {
+        return str.codePoints().sorted().mapToObj(c -> String.valueOf((char) c)).collect(Collectors.toList());
+    }
+
+    public static void main(String[] args) {
+        List<String> sorted = asc("23124129981");
+        System.out.println(sorted);
     }
 
 }

@@ -15,9 +15,9 @@ import java.util.stream.Collectors;
  */
 public class Ch0603 {
 
-    static class Student {
-        String name;
-        Integer score;
+    private static class Student {
+        final String name;
+        final Integer score;
 
         Student(String name, Integer score) {
             this.name = name;

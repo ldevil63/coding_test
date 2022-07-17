@@ -8,8 +8,8 @@ import java.util.stream.Collectors;
 public class StreamSample {
 
     static class Student {
-        String name;
-        Integer score;
+        final String name;
+        final Integer score;
 
         Student(String name, Integer score) {
             this.name = name;
